@@ -21,10 +21,8 @@ This project provides a comprehensive zsh configuration tailored for productivit
 ##  Features
 
 - **Powerlevel10k Theme:**  Utilizes the Powerlevel10k zsh theme for a visually appealing and informative prompt.
-- **fzf Integration:**  Integrates fzf for fast and interactive fuzzy searching of files, commands, and history.
 - **Nvim Integration:** Configures seamless integration with Neovim for efficient code editing from the command line.
 - **Custom Aliases:** Includes a set of custom aliases to simplify common commands and tasks.
-- **Plugin Management:** Leverages plugins like `zsh-autocomplete` and `zsh-syntax-highlighting` for enhanced autocompletion and syntax highlighting.
 - **Ollama Integration:**  Includes tools for seamless interaction with the Ollama AI model from the command line.
 - **Custom Functions:** Provides custom zsh functions for advanced command-line utilities.
 
@@ -34,26 +32,32 @@ This project provides a comprehensive zsh configuration tailored for productivit
 
 This project assumes you're using zsh as your shell.  Follow these steps to install and configure it:
 
-1.  **Clone the Repository:**
+1.  **BACK-UP**
+```sh
+mv ~/.config/zsh ~/.config/zsh.bak
+mv ~/.zshenv ~/.zshenv.bak
+```
 
-    ```bash
-    git clone https://github.com/DominikOcsofszki/zsh.config.git
-    cd yourproject
-    ```
+2.  **Clone the Repository:**
 
-2.  **Configure zsh:**
-
-    *   Rename `.zshrc` to something else, e.g., `.zshrc.backup`
-    *   Copy the project's `.zshrc` file into your home directory:
-
-        ```bash
-        cp .zshrc ~/.zshrc
-        ```
+```bash
+git clone https://github.com/DominikOcsofszki/zsh.config.git ~/.config/zsh
+cd ~/.config/zsh
+ln -s  ~/.config/zsh/.zshenv ~/.zshenv
+```
 
 3.  **Install Dependencies (if necessary):**
 
-    Some dependencies may require additional installation steps.  Refer to the documentation for those dependencies (e.g., Powerlevel10k, fzf) and follow their respective installation instructions.  You might need to install these using your system's package manager (e.g., `apt`, `brew`).
+    Some dependencies may require additional installation steps.
+- Install brew:
+```sh
+/bin/ (`brew`)bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
+- Install Plugins
+```sh
+sh ~/.config/zsh/.zsh_plugins/install_all.sh
+```
 4.  **Reload zsh:**
 
     ```bash
