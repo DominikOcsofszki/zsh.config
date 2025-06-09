@@ -16,3 +16,6 @@ export HISTIGNORE="ls:cd:pwd"
 export HISTFILESIZE=20000
 
 source $ZDOTDIR/zsh_nvim/load_inside_nvim.zsh
+
+# uv
+export PATH="/Users/dominik/.local/bin:$PATH"
