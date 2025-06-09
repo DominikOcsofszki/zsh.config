@@ -37,7 +37,7 @@ This project assumes you're using zsh as your shell.  Follow these steps to inst
 1.  **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/yourproject.git
+    git clone https://github.com/DominikOcsofszki/zsh.config.git
     cd yourproject
     ```
 
