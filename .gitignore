@@ -1,0 +1,8 @@
+.zcompcache
+.ignore
+.p10k.zsh
+.zcompdump
+.zsh_history
+.DS_Store
+.zsh_sessions
+ignore
