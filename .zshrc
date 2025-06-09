@@ -1,15 +1,11 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-source $ZDOTDIR/.zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
 
-# ========================================
-# ========================================
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 source $ZDOTDIR/init.zsh
 
-# ========================================
-# ========================================
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-[[ ! -f ~/HOME/.config/zsh/zsh_symlink/.p10k.zsh ]] || source ~/HOME/.config/zsh/zsh_symlink/.p10k.zsh
+
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
